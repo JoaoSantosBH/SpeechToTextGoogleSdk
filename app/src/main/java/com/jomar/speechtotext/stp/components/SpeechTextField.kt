@@ -9,6 +9,7 @@ import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -26,4 +27,10 @@ fun SpeechTextField(text: String, onTextChange: (String) -> Unit) {
             unfocusedBorderColor = MaterialTheme.colorScheme.outline
         )
     )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun SpeechTextFieldPreview() {
+    SpeechTextField(text = "Olá, mundo!", onTextChange = {})
 }
